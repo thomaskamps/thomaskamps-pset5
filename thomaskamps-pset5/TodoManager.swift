@@ -12,8 +12,10 @@ class TodoManager {
     
     static let sharedInstance = TodoManager()
     
-    private init() { }
-    
+    private init() {
+        self.readTodos()
+    }
+
     private var lists: Array<TodoList> = []
     private var selectedList: Int = 0
     
